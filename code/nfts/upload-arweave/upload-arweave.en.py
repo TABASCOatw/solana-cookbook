@@ -13,7 +13,7 @@ transaction.add_tag('Content-Type', 'image/png')
 transaction.sign()
 transaction.send()
 
-image_url = API_URL+"/"+transaction.id
+image_url = f"{API_URL}/{transaction.id}"
 
 # Define metadata
 metadata = {
@@ -57,6 +57,6 @@ meta_transaction.add_tag('Content-Type', 'text/html')
 meta_transaction.sign()
 meta_transaction.send()
 
-metadata_url = API_URL+"/"+meta_transaction.id
+metadata_url = f"{API_URL}/{meta_transaction.id}"
 
 print(metadata_url)

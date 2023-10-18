@@ -6,6 +6,6 @@ secret_key= [
         148, 69, 241, 227, 167, 80, 141, 89, 240, 121, 121, 35, 172, 247, 68, 251, 226, 218, 48,
         63, 176, 109, 168, 89, 238, 135,
     ]
-    
+
 keypair = Keypair.from_bytes(secret_key)
-print("Created Keypair with Public Key: {}".format(keypair.pubkey()))
+print(f"Created Keypair with Public Key: {keypair.pubkey()}")

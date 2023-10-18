@@ -5,6 +5,8 @@ async with connect("wss://api.devnet.solana.com") as websocket:
     await websocket.account_subscribe(wallet.pubkey())
     # Capture response from account subscription 
     first_resp = await websocket.recv()
-    print("Subscription successful with id {}, listening for events \n".format(first_resp.result))
+    print(
+        f"Subscription successful with id {first_resp.result}, listening for events \n"
+    )
     updated_account_info = await websocket.recv()
     print(updated_account_info)    
